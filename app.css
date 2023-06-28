@@ -1,3 +1,11 @@
+title {
+    display: block;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(2, 93, 116);
+    font-size: 50px;
+    text-align: center;
+
+}
 h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: rgb(2, 93, 116);
@@ -13,8 +21,9 @@ body {
 }
 
 button {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: rgb(2, 93, 116);
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
