@@ -7,7 +7,7 @@ p {
 body {
     font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #bae0fa;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
   }
 
@@ -42,9 +42,11 @@ body {
   
   /* Table Styling */
   table {
-    width: 100%;
+    width: 95%;
+    height: 80%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    margin-top: none;
   }
   
   th {
@@ -56,6 +58,7 @@ body {
   }
   
   td {
+    font-size: small;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 10px;
     text-align: center;
