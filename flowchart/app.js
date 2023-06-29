@@ -3,6 +3,30 @@ var totalunit = 0;
 var cumgpa = 0;
 var degreeprogress = totalunit/180 * 100;
 
+function deselectClass(cell) {
+    var currentCourse = cell.dataset.course;
+    var cells = document.querySelectorAll('td[data-course="' + currentCourse + '"]');
+  
+    // Restore the original background color of the cells
+    for (var i = 0; i < cells.length; i++) {
+      cells[i].classList.remove("completed");
+      cells[i].style.backgroundColor = blankColor;
+    }
+  
+    // Update the cumulative GPA and total units
+    var unitCount = parseFloat(document.getElementById("unitCount").value);
+    var grade = document.getElementById("grade").value;
+    var gradePoint = convertToGradePoint(grade);
+    totalgp -= unitCount * gradePoint;
+    totalunit -= unitCount;
+    cumgpa = totalunit !== 0 ? totalgp / totalunit : 0;
+  
+    updateCumulativeGPA();
+    updateTotalUnit();
+    updateDegreeProgress();
+  }
+  
+
 function openModal(cell) {
   // Display the modal
   var modal = document.getElementById("myModal");
@@ -61,11 +85,23 @@ window.addEventListener("load", function () {
 
   var cancelButton = document.querySelector("#courseForm button[type='button']");
   cancelButton.addEventListener("click", cancelChanges);
+});
+
+var deselectButton = document.getElementById("deselect");
+deselectButton.addEventListener("click", function () {
+  var currentCourse = document.getElementById("myModal").dataset.currentCourse;
+  var cells = document.querySelectorAll('td[data-course="' + currentCourse + '"]');
+  for (var i = 0; i < cells.length; i++) {
+    cells[i].classList.remove("completed");
+  }
+
+  deselectClass(cells[0]); // Assuming the first cell is used as a reference
 
   updateCumulativeGPA();
-  updateTotalUnit(); // Initial update of totalUnit value in the HTML
+  updateTotalUnit();
   updateDegreeProgress();
 });
+
 
 function updateCumulativeGPA() {
   var cumulativeGPAElement = document.getElementById("cumulativeGPA");
