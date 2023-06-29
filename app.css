@@ -1,31 +1,159 @@
-title {
-    display: block;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: rgb(2, 93, 116);
-    font-size: 50px;
-    text-align: center;
-
-}
-h1 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: rgb(2, 93, 116);
-    font-size: 50px;
-    text-align: center;
-}
+/* General Styling */
 p {
-    color : rgb(2, 123, 153);
-}
-
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #0074D9;
+    line-height: 1.5;
+  }
 body {
-    background-color: rgb(129, 208, 240);
-}
+    font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #bae0fa;
+    margin: 0;
+    padding: 0;
+  }
 
-button {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: rgb(2, 93, 116);
-    color: rgb(255, 255, 255);
-    padding: 14px 20px;
-    margin: 8px 0;
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
     border: none;
     cursor: pointer;
-}
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #000;
+  }
+  
+  /* Table Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #001f3f;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  td {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #001f3f;
+  }
+  
+  tr.quarters td {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    background-color: #0074D9;
+    color: #fff;
+  }
+  
+  tr.classes td {
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  tr.classes td:hover {
+    background-color: #f2f2f2;
+  }
+  
+  tbody.classes td.completed {
+    background-color: #4CAF50;
+    color: #fff;
+  }
+  
+  /* Modal Styling */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 5px;
+  }
+  
+  .modal-content h2 {
+    text-align: center;
+    color: #001f3f;
+    margin-top: 0;
+  }
+  
+  .close {
+    color: #001f3f;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: #000;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #001f3f;
+  }
+  
+  form input[type="number"],
+  form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  form button[type="submit"],
+  form button[type="button"] {
+    background-color: #001f3f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  form button[type="submit"]:hover,
+  form button[type="button"]:hover {
+    background-color: #000;
+  }
+
+  

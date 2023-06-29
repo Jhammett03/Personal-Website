@@ -1,22 +1,205 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<title>Jared Hammett: Software Engineering</title>
-<link rel="stylesheet" href="app.css">
+  <title>Jared Hammett: Software Engineering</title>
+  <link rel="stylesheet" href="app.css">
 </head>
-
 <body>
+  <button onClick="aboutMe()">About Me</button>
+  <button onClick="myProjects()">My Projects</button>
+  <button>Contact Me</button>
+
+  <h1>Cal Poly CS Interactive Flowchart</h1>
+  
+  <table align="center" border="1" frame="all" rules="rows">
+    <thead>
+      <tr>
+        <th colspan="3">Freshman</th>
+        <th colspan="3">Sophomore</th>
+        <th colspan="3">Junior</th>
+        <th colspan="3">Senior</th>
+      </tr>
+    </thead>
+    <tr class="quarters">
+      <td>Fall</td>
+      <td>Winter</td>
+      <td>Spring</td>
+      <td>Fall</td>
+      <td>Winter</td>
+      <td>Spring</td>
+      <td>Fall</td>
+      <td>Winter</td>
+      <td>Spring</td>
+      <td>Fall</td>
+      <td>Winter</td>
+      <td>Spring</td>
+    </tr>
+    <tbody class="classes">
+      <tr>
+        <td rowspan="2" data-course="CPE 123" onclick="openModal(this)"><em>Introduction to Computing</em><br><br><b>CPE/CSC 123 (4)</b><br>(Basic Computer Literacy)</td>
+        <td rowspan="2" data-course="CPE 101" onclick="openModal(this)"><em>Fundementals of Computer Science</em><br><br><b>CPE 101 (4)</b><br>*</td>
+        <td rowspan="2" data-course="CPE 202" onclick="openModal(this)"><em>Data Structures</em><br><br><b>CSC/CPE 202 (4)</b><br><font size="1">(CPE/CSC 101; MATH 141 or <br>221 w/min C-, Intr. Consent)</font></td>
+        <td rowspan="2" data-course="CPE 203" onclick="openModal(this)"><em>Proj-Based Object-<br>Oriented Programming &<br>Design<br><br></em><b>CSC/CPE 203 (4)</b><br><font size="1">(CSC/CPE 202 w/min C- or <br> Instr. consent)</font></td>
+        <td height="min" rowspan="1" colspan="3" data-course="CPE 315" onclick="openModal(this)"><em>Computer Architecture<br><br></em><b>CSC/CPE 315 (4)</b><br><font size="1">(CSC/CPE 1-2 & 103, or 202 & 203; CSC 225, CPE/EE 229, or CPE/EE 233)</font></td>
+        <td colspan="2" rowspan="1" data-course="CPE 430" onclick="openModal(this)"><em>Programming Languages<br><br></em><b>CSC 430 (4)</b><br><font size="1">(CSC 349; CSC/CPE 357)</font></td>
+        <td colspan="3" rowspan="1" data-course="CPE 453" onclick="openModal(this)"><em>Introduction to Operating Systems<br><br></em><b>CSC/CPE 453 (4)</b><br><font size="1">(CSC/CPE 357; 225 or CPE/EE 229 or 233)</font></td>
 
 
+      </tr>
+      <tr>
+        <td colspan="3" rowspan="1" data-course="CPE 357" onclick="openModal(this)"><em>Systems Programming<br><br></em><b>CSC/CPE 357 (4)</b><br><font size="1">(C- or better in CSC/CPE 102 & 103,<br> or 202 & 203, or Instr. consent; CSC 225 or CPE/EE 233)</font></td>
+        <td colspan="2" rowspan="2" > <br> <br> <br></td>
+        <td colspan="1" rowspan="2" data-course="CPE 445" onclick="openModal(this)"><em>Theory of Computation I</em><br><b>CSC 445 (4)</b><br><font size="1">(CSC 248 or 348)_</font></td>
+        <td colspan="1" rowspan="1" data-course="CSC 491" onclick="openModal(this)"><em>Senior Project Lab I</em><br><b>CSC 491 or 497(2)</b><br><font size="1">(CSC 307 or 309; Instr. consent)</font></td>
+        <td colspan="1" rowspan="1" data-course="CSC 492" onclick="openModal(this)"><em>Senior Project Lab II</em><br><b>CSC 491 or 498(2)</b><br><font size="1">(CSC 491; Instr. consent)</font></td>
 
-<button onClick = "aboutMe()">About Me</button>
-<button onClick="myProjects()">My Projects</button>
-<button>Contact Me</button>
 
-<h1>Jared Hammett</h1>
+    </tr>
+
+      <tr>
+        <br>
+      </tr>
+      <tr>
+        <td rowspan="2"> <br> <br> <br></td>
+        <td rowspan="2"> <br> <br> <br></td>
+        <td rowspan="1"> <br> <br> <br></td>
+        <td colspan="3" rowspan="1" data-course="CPE 225" onclick="openModal(this)"><em>Introduction to Computer Organization</em><br><b>CSC 225 (4)</b><br><font size="1">(CSC/CPE 202)</font></td>
+        <td colspan="3" rowspan="1" data-course="CSC 300" onclick="openModal(this)"><em>Professional Responsibilities  or Ethics, Science, & Tech</em><br><b>CSC 300 (4) or Phil 323 (4)</b> </td>
+        <td rowspan="1"> <br> <br> <br></td>
+        <td rowspan="1"> <br> <br> <br></td>
+        <td rowspan="1"> <br> <br> <br></td>
+      </tr>
+
+    <tr>
+        <td rowspan="2" data-course="Life Science Support Elective" onclick="openModal(this)"><em>Life Science Support Elective</em><br><b> BIO 111, 161,<br> 213 & BMED213;<br> BOT121; MCRO 221</b><br>[B2]<br></td>
+        <td rowspan="2" data-course="Additional Science Support Elective" onclick="openModal(this)"><em>Additional Science Support Elective</em><br><b>BIO 111, 161;<br> BOT 121; CHEM 124;<br> MCRO 221, 224; PHYS 141</b> <br>[Area B Elective] <br></td>
+        <td rowspan="2" data-course="CSC 248" onclick="openModal(this)"><em>Discrete Structures</em><br><b>CSC 248 (4)</b> <br><font size="1">(CSC/CPE 102 & 103,<br> or 202 & 203, w/min C- or<br> Instr. consent)</font> <br></td>
+        <td rowspan="2" data-course="CSC 349" onclick="openModal(this)"><em>Design and Analysis of Algorithms</em><br><b>CSC 349 (4)<br></b> <br><font size="1">(CSC/CPE 102 & 103,<br> or 202 & 203; MATH 142<br> & CSC 248, 340, or MATH 248)</font> <br></td>
+        <td rowspan="2"> <br> <br> <br></td>
+        <td rowspan="2" data-course="Choose One" onclick="openModal(this)"><em><b>Choose One:</b></em><br><b>CSC 349 (4) <br> CSC 323 (4) <br> CSC 325 (4)</b></td>
+        <td rowspan="2" data-course="Technical Elective" onclick="openModal(this)"><em><b>Technical Elective (4)</b></em></td>
+        <td rowspan="2" data-course="MATH/STAT Elective" onclick="openModal(this)"><em>MATH/STAT Elective</em><br><b>Math 241, 248, 306,<br> 335, 336, 437, 470;<br> STAT 323, 324, 330,<br> 331, 334, 416, 418, 419, 434 (4)</b> <br> <br></td>
+        <td rowspan="1"> <br> <br> <br></td>
+        <td rowspan="1"> <br> <br> <br></td>
+    </tr>
+    <tr>
+        <br>
+    </tr>
+
+    <tr>
+        
+        <td rowspan="2" data-course="Calculus I" onclick="openModal(this)"><em>Calculus I</em><br><b>Math 141 (4)</b> <br>*<br>[B4] <br></td>
+        <td rowspan="2" data-course="Calculus II" onclick="openModal(this)"><em>Calculus II</em><br><b>Math 142 (4)</b> <br><font size="1">(MATH 141 w/min C-)</font><br>[B4] <br></td>
+        <td rowspan="2" data-course="Calculus III" onclick="openModal(this)"><em>Calculus III</em><br><b>Math 143 (4)</b> <br><font size="1">(MATH 142 w/min C-)</font><br>[Area B Elective] <br></td>
+        <td rowspan="2" data-course="Linear Math" onclick="openModal(this)"><b>CHOOSE ONE:</b><br><em>Linear Math</em><br><b>MATH 206 (4)</b><br>or<br><b>MATH 244 (4)</b> <br><font size="1">(MATH 143)</td>
+        <td rowspan="2"> <br> <br> <br></td>
+        <td rowspan="2"> <br> <br> <br></td>
+        <td rowspan="2" data-course="Intro Software Engineering" onclick="openModal(this)"><b>Choose One Series:</b><br><em>Intro Software Engineering & Elective</em><br><b>CSC 307 (4)</b><br>or<br><b>CSC 308 (4)</b> <br><font size="1">(CSC 248 or CSC 348)</td>
+        <td rowspan="2" data-course="Intro Software Engineering II" onclick="openModal(this)"><br><em>Intro Software Engineering & Elective Cont.</em><br><b>General Curriculum Technical Elective (4)</b><br>or<br><b>CSC 309 (4)</b> <br><font size="1">(CSC 308)</td>
+        <td rowspan="2" data-course="Statistical Methods For Engineers" onclick="openModal(this)"><br><em>Statistical Methods for Engineers</em><br><b>STAT 312 (4)</b><br>*<br><b>[Upper-Division B]</b></td>
+        <td rowspan="2" data-course="Technical Elective II" onclick="openModal(this)"><em><b>Technical Elective (4)</b></em></td>
+        <td rowspan="2" data-course="Technical Elective III" onclick="openModal(this)"><em><b>Technical Elective (4)</b></em></td>
+        <td rowspan="2" data-course="Technical Elective IIII" onclick="openModal(this)"><em><b>Technical Elective (4)</b></em></td>
+
+    
+    </tr>
+    <tr>
+        <br>
+    </tr>
+    <tr>
+        <td colspan="3" rowspan="1" data-course="Expository Writing" onclick="openModal(this)"><br><em>Expository Writing</em><br><b>ENGL 133/134 (4)**</b><br><b>[A2]</b></td>
+        <td rowspan="2" data-course="Phys 141" onclick="openModal(this)"><br><em>Pick One:</em><br><b>PHYS 141 (4)</b><br>or<br><b>CHEM 124 (4)</b><br></td>
+        <td rowspan="2" data-course="Phys 132" onclick="openModal(this)"><br><em>Pick One:</em><br><b>PHYS 132 (4)</b><br>or<br><b>CHEM 125 (4)</b><br></td>
+        <td rowspan="2" data-course="Phys 133" onclick="openModal(this)"><br><em>Pick One:</em><br><b>PHYS 132 (4)</b><br>or<br><b>CHEM 126 (4)</b><br>[B1 & B3]</td>
+        <td colspan="3" rowspan="2" data-course="Gender, Race" onclick="openModal(this)"><br><em>Gender, Race, Culture, Science, and Tech</em><br><b>WGS/ES 350 (4)*</b><br>or<br><b>WGS/ES 351 (4)*</b></td>
+        <td rowspan="2"> <br> <br> <br></td>
+        <td rowspan="2"> <br> <br> <br></td>
+        <td rowspan="2" data-course="Technical Elective V" onclick="openModal(this)"><em><b>Technical Elective (4)</b></em></td>
+    </tr>
+    <tr>
+        <br>
+    </tr>
+    <tr> 
+        <td colspan="3" rowspan="2" data-course="Oral Communication" onclick="openModal(this)"><br><em>Oral Communication</em><br><b>COMS 101/102 (4)**</b><br><b>[A1]</b></td>
+        <td rowspan="2"> <br> <br> <br></td>
+        <td rowspan="2"> <br> <br> <br></td>
+        <td rowspan="2"> <br> <br> <br></td>
+        <td rowspan="2"> <br> <br> <br></td>
+        <td rowspan="2"> <br> <br> <br></td>
+        <td rowspan="2"> <br> <br> <br></td>
+        <td rowspan="2"> <br> <br> <br></td>
+        <td rowspan="2"> <br> <br> <br></td>
+        <td rowspan="2"> <br> <br> <br></td>
+    </tr>
+    <tr>
+        <br>
+    </tr>
+    <tr>
+        <td rowspan="2"> <br> <br> <br></td>
+        <td colspan="4" rowspan="2" data-course="Reasoning, Argumentation, and Writing" onclick="openModal(this)"><br><em>Reasoning, Argumentation, and Writing</em><br><b>COMS 126, 145, ENGL 145, 147, ES 145, PHIL 126 or WGS 145 (4)**</b><br><b>[A3]</b></td>
+        <td colspan="2" rowspan="2" data-course="PHIL 230" onclick="openModal(this)"><br><em>Pick One:</em><b><br>PHIL 230<br>or<br>PHIL 231</b><br><b>(4)</b><br><b>[C2]</b></td>
+        <td rowspan="2" data-course="GE" onclick="openModal(this)"> <b>GE (4)</b><br>**</td>
+        <td rowspan="2" data-course="GE I" onclick="openModal(this)"> <b>GE (4)</b><br>**</td>
+        <td rowspan="2" data-course="GE II" onclick="openModal(this)"> <b>GE (4)</b><br>**</td>
+        <td rowspan="2" data-course="GE III" onclick="openModal(this)"> <b>GE (4)</b><br>**</td>
+        <td rowspan="2" data-course="GE IV" onclick="openModal(this)"> <b>GE (4)</b><br>**</td>
+    
+    </tr>
+    <tr>
+        <br>
+    </tr>
+    <tr>
+        <td rowspan="2" data-course="GE V" onclick="openModal(this)"> <b>GE (4)</b><br>**</td>
+        <td rowspan="2" data-course="GE VI" onclick="openModal(this)"> <b>GE (4)</b><br>**</td>
+        <td rowspan="2"> <br> <br> <br></td>
+        <td rowspan="2"> <br> <br> <br></td>
+        <td rowspan="2"> <br> <br> <br></td>
+        <td rowspan="2"> <br> <br> <br></td>
+        <td colspan="3" rowspan="2" data-course="GWR" onclick="openModal(this)"><br><em><b>Graduation Writing Requirement-GWR*</b></em><br><font size="1">(Students can attempt to fulsill requirement after 90 earned units; students should complete the requirement before senior year)</font></td>
+        <td rowspan="2"> <br> <br> <br></td>
+        <td rowspan="2"> <br> <br> <br></td>
+    </tr>
+
+
+    </tbody>
+  </table>
+  <p>Cumulative GPA: <span id="cumulativeGPA"></span></p>
+  <p>Current Total Units: <span id="totalunit"></span></p>
+  <p>Current Degree Progress: <span id="degreeprogress"></span>%</p>
+
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onClick="closeModal()">&times;</span>
+      <h2 id="courseTitle"></h2>
+      <h3 id="courseCode"></h3>
+      <p id="courseDescription"></p>
+      <form id="courseForm">
+        <label for="unitCount">Unit Count:</label>
+        <input type="number" id="unitCount" name="unitCount" required><br>
+        <label for="grade">Grade:</label>
+        <select id="grade" name="grade" required>
+          <option value="">Select Grade</option>
+          <option value="A">A</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B">B</option>
+          <option value="B-">B-</option>
+          <option value="C+">C+</option>
+          <option value="C">C</option>
+          <option value="C-">C-</option>
+          <option value="D+">D+</option>
+          <option value="D">D</option>
+          <option value="D-">D-</option>
+          <option value="F">F</option>
+        </select><br><br>
+        <button type="submit">Apply</button>
+        <button type="button" onClick="cancelChanges()">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
-
-<script src="app.js"></script>
-
+  
 </html>
