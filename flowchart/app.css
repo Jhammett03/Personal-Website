@@ -1,4 +1,8 @@
 /* General Styling */
+a{
+  color: #bae0fa;
+  underline
+}
 p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #0074D9;
