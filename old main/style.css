@@ -1,0 +1,48 @@
+h1 {
+    text-align: center;
+    color: #5b79ff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body {
+    background-color: #bae0fa;
+    height: 200vh
+    
+}
+h1 {
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transform: translateX(2%);
+}
+h2 {
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transform: translateX(49%);
+}
+
+#project-buttons {
+    position: relative;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+#project-buttons:hover {
+    background: #fff;
+    transition: all 0.5s ease-in-;
+}
+  
+#flowchart {
+    margin: 0;
+    position: absolute;
+    text-align: center; /* Updated property */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #001f3f;
+    color: #fff;
+    padding: 10px 20px;
+    border: 5px ridge #2b4e74;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
