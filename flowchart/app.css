@@ -86,6 +86,10 @@ body {
     background-color: #4CAF50;
     color: #fff;
   }
+  tbody.classes td.incomplete {
+    background-color: blank;
+    color: #000000;
+  }
   
   /* Modal Styling */
   .modal {
@@ -153,6 +157,7 @@ body {
     border-radius: 4px;
     transition: background-color 0.3s;
   }
+
   
   form button[type="submit"]:hover,
   form button[type="button"]:hover {
