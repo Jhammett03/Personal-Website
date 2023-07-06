@@ -223,16 +223,24 @@
 
 .main__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-self: center;
     margin: 0 auto;
-    height: 90vh;
+    height: 40vh;
     background-color: #141414;
     z-index: 1;
     width: 100%;
     max-width: 1920px;
     padding: 0 50px;
+}
+
+.main__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
 }
 
 .main__content h1 {
@@ -244,6 +252,7 @@
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
+    margin-bottom: 1rem;
 }
 
 .main__content h2 {
@@ -251,7 +260,7 @@
     background-color: #6299ff;
     background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
     background-size: 100%;
-    margin-bottom: none;
+    margin-bottom: 1rem;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -259,10 +268,10 @@
 }
 
 .main__content p {
-    margin-top: none;
     font-size: 2rem;
     font-weight: 700;
     color: #fff;
+    margin-bottom: 1rem;
 }
 
 .main__btn {
@@ -272,7 +281,7 @@
     border: none;
     border-radius: 4px;
     color: #fff;
-    margin-top: 2rem;
+    margin-top: none;
     cursor: pointer;
     position: relative;
     transition: all 0.35s;
@@ -283,7 +292,7 @@
     position: relative;
     z-index: 2;
     color: #fff;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 .main__btn:after {
@@ -313,7 +322,11 @@
 #main__img {
     height: 100%;
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
+
+
 
 /* Mobile Responsive*/
 @media screen and (max-width: 768px) {
@@ -418,7 +431,7 @@
         to bottom,
         rgba(0, 0, 0, 0) 0%,
         rgba(17, 17, 17, 0.6) 100%
-    ), url('images/pic2.jpg');
+    ), url('images/pic3.png');
     background-size: cover;
     position: relative;
     color: #fff;
@@ -429,8 +442,8 @@
     background-image: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0) 0%,
-        rgba(17, 17, 17, 0.6) 100%
-    ), url('images/pic3.jpg');
+        rgba(56, 89, 139, 0.2) 100%
+    ), url('images/pic2.svg');
 }
 
 .services__card:nth-child(3) {
@@ -438,7 +451,7 @@
         to bottom,
         rgba(0, 0, 0, 0) 0%,
         rgba(17, 17, 17, 0.6) 100%
-    ), url('images/pic4.jpg');
+    ), url('images/pic1.jpg');
 }
 
 .services h2 {
@@ -456,8 +469,8 @@
         rgba(117, 65, 156, 0) 100%
     );
     background-size: 80%;
-    margin-bottom: 2rem; /* Adjust as needed */
-    font-size: 2.5rem;
+    margin-bottom: 1rem; /* Adjust as needed */
+    font-size: 2rem;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -559,7 +572,7 @@
 }
 
 .footer__container h2 {
-    align: center;
+    align-self: center;
     color: #21d4fd;
 }
 

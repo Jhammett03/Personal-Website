@@ -1,8 +1,19 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {}
+    "folders": [
+        {
+            "path": "flowchart"
+        },
+        {
+            "path": "images"
+        },
+        {
+            "path": "main"
+        },
+        {
+            "path": "old main"
+        },
+        {
+            "path": "projects"
+        }
+    ]
 }
