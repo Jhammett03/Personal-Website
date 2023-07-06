@@ -745,3 +745,36 @@
       width: 100%;
     }
   }
+
+  .about__me {
+    height: 250px;
+    background: #141414;
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+
+  
+
+  .about__me h2 {
+    margin: 4px;
+    justify-content: center;
+    align-self: center;
+    font-size: 2rem;
+    background-color: #6299ff;
+    background-image: linear-gradient(to top, #ffb199 100% );
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-align: center;
+  }
+
+  .about__me p {
+    color: #fff;
+    max-width: 400px;
+    margin: 10px ;
+  }
