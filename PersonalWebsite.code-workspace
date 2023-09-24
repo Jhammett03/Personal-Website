@@ -17,6 +17,9 @@
         },
         {
             "path": "about"
+        },
+        {
+            "path": "Resume"
         }
     ]
 }

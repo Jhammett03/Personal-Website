@@ -218,6 +218,7 @@
 /* Hero Section CSS */
 .main {
     background-color: #14141414;
+    width: 100%;
 
 }
 
@@ -229,7 +230,7 @@
     height: 40vh;
     background-color: #141414;
     z-index: 1;
-    width: 100%;
+    width: auto;
     max-width: 1920px;
     padding: 0 50px;
 }
@@ -457,7 +458,8 @@
 .services h2 {
     position: absolute;
     top: 10px;
-    left: 30px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #6299ff;
     background-image: linear-gradient(
         to right,
